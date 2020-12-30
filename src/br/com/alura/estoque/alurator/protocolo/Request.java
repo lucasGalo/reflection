@@ -10,6 +10,8 @@ public class Request {
         String[] partesUrl = url.replaceFirst("/", "").split("/");
         nomeControler = Character.toUpperCase(partesUrl[0].charAt(0)) +
                 partesUrl[0].substring(1) + "Controller";
+
+        nomeMetodo = partesUrl[1];
     }
 
     public String getNomeControler() {
