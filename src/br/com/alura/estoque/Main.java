@@ -25,6 +25,8 @@ public class Main {
 			
 			Alurator alurator = new Alurator("br.com.alura.estoque.controle.");
 			alurator.registra(ProdutoDao.class, ProdutoDaoMock.class);
+			// não consigo add tipos diferentes
+//			alurator.registra(List.class, String.class);
 			while (!url.equals("exit")) {
 				Object response = alurator.executa(url);
 				
