@@ -3,6 +3,7 @@ import br.com.alura.estoque.dao.ProdutoDao;
 import br.com.alura.estoque.dao.ProdutoDaoMock;
 import br.com.alura.estoque.modelo.Alurator;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
