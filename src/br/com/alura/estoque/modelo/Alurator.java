@@ -5,6 +5,8 @@ import br.com.alura.estoque.alurator.ioc.ContainerIoc;
 import br.com.alura.estoque.alurator.protocolo.Request;
 import br.com.alura.estoque.alurator.reflexao.ManipuladorObjeto;
 import br.com.alura.estoque.alurator.reflexao.Reflexao;
+import br.com.alura.estoque.dao.ProdutoDao;
+import br.com.alura.estoque.dao.ProdutoDaoMock;
 
 import java.util.Map;
 
@@ -39,5 +41,9 @@ public class Alurator {
 
         retorno = new ConversorXML().converte(retorno);
         return retorno;
+    }
+
+    public void registra(Class<?> tipoFonte, Class<?> tipoDestino) {
+        container.registra(tipoFonte, tipoDestino);
     }
 }

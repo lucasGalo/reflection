@@ -1,4 +1,6 @@
 package br.com.alura.estoque;
+import br.com.alura.estoque.dao.ProdutoDao;
+import br.com.alura.estoque.dao.ProdutoDaoMock;
 import br.com.alura.estoque.modelo.Alurator;
 
 import java.util.Scanner;
@@ -21,6 +23,7 @@ public class Main {
 			String url = s.nextLine();
 			
 			Alurator alurator = new Alurator("br.com.alura.estoque.controle.");
+			alurator.registra(ProdutoDao.class, ProdutoDaoMock.class);
 			while (!url.equals("exit")) {
 				Object response = alurator.executa(url);
 				
